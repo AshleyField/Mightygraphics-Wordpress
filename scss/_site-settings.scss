@@ -1,0 +1,27 @@
+/*
+Theme Name: Mightygraphics Custom Theme
+Author: Mightygraphics
+Author URI: http://mightygraphics.co.nz/
+Version: 1.0.0
+*/
+
+$mg-blue: #008CFF;
+$mg-med-blue: #2076BE;
+$mg-dark-blue: #001638;
+$wht: #fff;
+$blk: #000;
+$org: #ffa600;
+$grn: rgb(34, 122, 34);
+
+@mixin roboto {
+	font-family: 'Roboto', sans-serif;
+}
+
+@mixin kanit {
+	font-family: 'Kanit', sans-serif;
+	font-weight: 800;
+}
+
+@mixin font-shadow {
+	text-shadow: 0 2px 5px rgba(0,0,0,1);
+}

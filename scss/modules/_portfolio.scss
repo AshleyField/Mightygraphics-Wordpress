@@ -1,0 +1,260 @@
+.display-grid {
+    margin: 2em;
+
+    &-inner {
+        h2 {
+            text-align: center;
+            margin: 2em 0;
+        }
+
+        .images-container {
+
+            .image-container {
+
+                position: relative;
+                margin: 2em .5em;
+
+                img {
+                    width: 100%;
+                    display: block;
+                    box-shadow: 0 -3px 15px rgba(0,0,0,0.2);
+                }
+
+                .image-overlay {
+                    background-color: $mg-dark-blue;
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 100%;
+                    display: flex;
+                    height: 2.5em;
+                    box-shadow: 0 -2px 5px rgba(0,0,0,0.3);
+                
+                    .title {
+                        flex: 0 0 60%;
+                        color: $wht;
+                        line-height: 2.5em;
+                        @include kanit;
+                        text-transform: uppercase;
+                        text-align: center;
+                        letter-spacing: 1.5px;
+                        text-shadow: 0 0 5px rgba(0,0,0,0.2);
+
+                        h4 {
+                            font-size: .9em;
+                        }
+                    }
+
+                    .link {
+                        flex: 0 0 40%;
+                        a {
+                            color: $mg-blue;
+                            display: block;
+                            width: 100%;
+                            line-height: 2.5em;
+                            background-color: rgba(255,255,255,0.2);
+                            text-align: center;
+                            // text-transform: uppercase;
+                            text-decoration: none;
+                        }
+                    }
+
+                }
+
+                .photography-overlay {
+                    background-color: $org;
+
+                    .link {
+
+                        a {
+                            color: darken($org, 30%);
+                        }
+                        
+                    }
+                }
+
+                .video-overlay {
+                    height: 100%;
+                    width: 100%;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    display: flex;
+                    justify-content: center;
+                    align-content: center;
+                    flex-wrap: wrap;
+                    margin: 0 auto;
+
+                    
+                    .title {
+                        color: $wht;
+                        line-height: 2.5em;
+                        @include kanit;
+                        text-transform: uppercase;
+                        text-align: center;
+                        letter-spacing: 1.5px;
+                        text-shadow: 0 0 9px rgba(0,0,0,0.9);
+                        font-size: 2em;
+                        flex: 1 0 90%;
+                        line-height: 1em;
+                        margin-bottom: .5em;
+
+                        h4 {
+                            width: 80%;
+                            text-align: center;
+                            margin: 0 auto;
+                        }
+                    }
+
+                    .link {
+                        flex: 1 0 90%;
+                        align-self: center;
+
+                        a {
+                            img {
+                                width: 5em;
+                                margin: 0 auto;
+                            }
+                        }
+                    }
+
+
+                }
+
+            }
+        }
+
+        .view-all-work-btn {
+
+            transition: .3s ease all;
+            padding-bottom: 1em;
+
+            .icon {
+                float: right;
+                fill: $mg-dark-blue;
+
+                svg {
+                    display: block;
+                    width: 1.25em;
+                    margin-left: .5em;
+                    transition: .3s ease fill;
+                }
+            }
+
+            a {
+                float: right;
+                color: $mg-dark-blue;
+                text-decoration: none;
+                margin: 0;
+                padding: 0;
+                line-height: 1.25em;
+                transition: .3s ease color;
+            }
+
+            &:hover #svg-arrow {
+                fill: $mg-blue;
+            }
+
+            &:hover #view-all-port {
+                color: $mg-blue;
+            }
+        }
+    }
+}
+
+
+@media only screen and (min-width : 40em) {
+    .display-grid {
+        margin: 3em;
+    }
+}
+
+@media only screen and (min-width : 60em) {
+    .display-grid {
+        margin: 5em auto;
+        width: 80%;
+        max-width: 80em;
+        
+
+        &-inner {
+
+            .images-container {
+                display: flex;
+                flex-wrap: wrap;
+
+                .image-container {
+                    flex: 1 0 30%;
+                    box-shadow: none;
+                    padding: .5em;
+
+                    img {
+                        width: 100%;
+                        display: block;
+                        margin: 0;
+                    }
+
+                    .image-overlay {
+                        top: 0;
+                        height: 100%;
+                        width: 100%;
+                        background-color: rgba(0,22,56,0.8);
+                        display: flex;
+                        flex-wrap: wrap;
+                        align-content: center;
+                        opacity: 0;
+                        transition: .5s ease all;
+
+                        
+                        .title {
+                            flex: 1 0 90%;
+                            text-shadow: 0 0 5px rgba(0,0,0,0.8);
+                            font-size: 2em;
+                            line-height: 1.1em;
+                            margin: 0 .5em .5em .5em;
+                        }
+
+                        .link {
+                            flex: 1 0 90%;
+                            a {
+                                background-color: $mg-blue;
+                                width: 50%;
+                                margin: 0 auto;
+                                border-radius: 5px;
+                                box-shadow: 3px 2px 5px rgba(0,0,0,0.8);
+                                color: $wht;
+                                transition: .3s ease all;
+
+                                &:hover {
+                                    background-color: lighten($mg-dark-blue,7%);
+                                    box-shadow: 3px 2px 5px rgba(255,255,255,0.3);
+                                    transform: translate(.3em);
+                                }
+                            }
+                        }
+                        
+                    }
+
+                    .video-overlay {
+                        opacity: 0;
+                        transition: .5s ease all;
+                        background-color: rgba(0,22,56,0.8);
+
+                        &:hover {
+                            opacity: 1;
+                        }
+                    }
+
+                    &:hover {
+                        .image-overlay {
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+
+            .view-all-work-btn {
+                margin-top: 1.5em;
+            }
+        }
+    }
+}

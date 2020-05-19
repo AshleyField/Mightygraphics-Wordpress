@@ -1,0 +1,2 @@
+$(document).ready((function(){$(".open-btn").on("click",(function(){let t=$(".sidenav").data("state");"closed"==t&&($(".sidenav").css("width","250px"),$(".sidenav").data("state","open")),"open"==t&&($(".sidenav").css("width","0"),$(".sidenav").data("state","closed"))})),$(".close-btn").on("click",(function(){$(".sidenav").css("width","0"),$(".sidenav").data("state","closed")}))}));
+//# sourceMappingURL=scripts.js.map

@@ -1,0 +1,185 @@
+footer {
+    background-color: #001638;
+    background-image: url("data:image/svg+xml,%3Csvg width='52' height='26' viewBox='0 0 52 26' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23082640' fill-opacity='0.4'%3E%3Cpath d='M10 10c0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4v2c-3.314 0-6-2.686-6-6 0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6zm25.464-1.95l8.486 8.486-1.414 1.414-8.486-8.486 1.414-1.414z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    width: 100%;
+
+    .footer-row {
+        padding: 3em 0;
+
+        .socials {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+
+            .title {
+                flex: 1 0 95%;
+                margin-bottom: 1.5em;
+
+                h4 {
+                    color: $wht;
+                    @include kanit;
+                    text-transform: uppercase;
+                    text-align: center;
+                    font-size: 2em;
+                }
+            }
+
+            .social-icon {
+                flex: 0 0 10%;
+                margin: 0 .5em;
+
+                a {
+                    svg {
+                        width: 3em;
+                        display: block;
+                    }
+                }
+            }
+        }
+
+        .logo {
+            width: 50%;
+            margin: 0 auto;
+
+            img {
+                width: 100%;
+                display: block;
+            }
+        }
+
+        .contact {
+            text-align: center;
+            margin: 1.5em 0 1em 0;
+
+            a {
+                color: $mg-blue;
+            }
+        }
+
+        .links {
+            margin: 2.5em 0;
+            ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                text-align: center;
+
+                li {
+                    margin: .5em 0;
+                    a {
+                        color: $wht;
+                        text-decoration: none;
+                        text-transform: uppercase;
+                        @include kanit;
+                        font-size: 1.5em;
+                    }
+                }
+            }
+        }
+
+        .copyright {
+            text-align: center;
+            color: $mg-blue;
+        }
+    }
+
+}
+
+@media only screen and (min-width : 40em) {
+
+}
+
+@media only screen and (min-width : 60em) {
+    footer {
+        .footer-line {
+            display: none;
+        }
+
+        .footer-row {
+            display: flex;
+            flex-wrap: wrap;
+            width: 60%;
+            margin: 0 auto;
+            justify-content: space-between;
+
+            &:last-child {
+                padding: 0 0 2em 0;
+            }
+
+            .socials {
+                flex: 1 0 90%;
+
+                .social-icon {
+                    margin: 0;
+                   a {
+                       svg {
+                           width: 2em;
+                           transition: .5s ease all;
+       
+                       }
+                   }
+
+                   &:hover {
+                    a {
+                        svg {
+                            fill: $mg-blue;
+                        }
+                    }
+                   }
+                }
+            }
+
+            .logo {
+                flex: 1 0 45%;
+                align-self: center;
+                order: 1;
+                margin: 0;
+
+                img {
+                    width: 10em;
+                }
+            }
+
+            .contact {
+                flex: 1 0 45%;
+                margin: 0;
+                text-align: left;
+                order: 3;
+            }
+
+            .links {
+                flex: 1 0 45%;
+                order: 2;
+                align-self: flex-end;
+                text-align: right;
+
+                ul {
+                    display: flex;
+                    justify-content: center;
+
+                    li {
+                        flex: 1 0 15%;
+                        margin: 0 .5em;
+
+                        a {
+                            transition: .5s ease all;
+                            display: block;
+
+                            &:hover {
+                                color: $mg-blue;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .copyright {
+                flex: 1 0 45%;
+                text-align: right;
+                order: 4;
+                margin: 0;
+                
+            }
+        }
+    }
+}

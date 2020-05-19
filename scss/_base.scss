@@ -1,0 +1,83 @@
+// Base
+
+body {
+	font-family: 'Roboto', sans-serif;
+	
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+}
+
+html {
+	margin-top: 0;
+}
+
+.standard-margin {
+	margin: 4em 2em;
+}
+
+.fade-in{
+	transition: all .5s ease-in;
+	opacity: 0;
+}
+
+
+.appear {
+	opacity: 1;
+}
+
+#first {
+	margin: 5% auto;
+	width: 80%;
+}
+
+
+#second .text-area {
+	margin: 5% auto;
+	width: 80%;
+}
+
+#third .text-area {
+	margin: 5% auto !important;
+	width: 80% !important;
+}
+
+.section-devider {
+	width: 50%;
+	height: 1px;
+	margin: 1em auto;
+	margin-bottom: 3em;
+	border: none;
+	border-bottom: 1px rgba(0,0,0,0.2) solid;
+	display: block;
+}
+
+.clear-space {
+	height: 4em;
+	display: block;
+}
+
+#after-sponsors {
+	margin-top: 5em;
+}
+
+.events-wrapper {
+	height: 40vh;
+
+	.events-inner {
+		h1 {
+			@include kanit;
+			text-transform: uppercase;
+			text-align: center;
+			margin: 4em 0;
+		}
+	}
+}
+
+::selection {
+	background: lighten($mg-blue,45%); /* WebKit/Blink Browsers */
+  }
+  ::-moz-selection {
+	background: lighten($mg-blue,45%); /* Gecko Browsers */
+  }

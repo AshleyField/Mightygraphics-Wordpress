@@ -1,0 +1,94 @@
+.banner {
+	background-image: url('./images/Black_Spoke_Mockup_v2.jpg');
+	height: 15em;
+	background-position: center;
+	background-size: cover;
+	position: relative;
+
+	&-inner {
+		position: absolute;
+		width: 30em;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		
+		.callout {
+			width: 70%;
+			margin: 0 auto;
+			h1 {
+				@include kanit;
+				color: $wht;
+				@include font-shadow;
+				text-transform: uppercase;
+				text-align: center;
+				font-size: 2.2em;
+			}
+		}
+
+		.button {
+			margin: 0 auto;
+			width: 10em;
+
+			a {
+				display: block;
+				border-radius: 7px;
+				width: 100%;
+				padding: .7em;
+				background-color: $mg-dark-blue;
+				text-decoration: none;
+				color: $wht;
+				@include roboto;
+				text-align: center;
+				box-shadow: 0 2px 6px rgba(0,0,0,0.8);
+			}
+		}
+	}
+}
+
+@media only screen and (min-width : 40em) {
+	.banner {
+		height: 20em;
+
+		&-inner {
+			.callout {
+				width: 100%;
+				h1 {
+					font-size: 3em;
+				}
+			}
+
+			.button {
+				width: 15em;
+			}
+		}
+	}
+}
+
+@media only screen and (min-width : 60em) {
+	.banner {
+		height: 30em;
+
+		&-inner {
+			width: 40em;
+
+			.callout {
+				h1 {
+					font-size: 4em;
+				}
+			}
+			.button {
+				width: 20em;
+
+				a {
+					transition: .5s ease all;
+					font-size: 1.25em;
+
+					&:hover {
+						background-color: $mg-blue;
+						transform: translate(.3em);
+					}
+				}
+			}
+		}
+	}
+}
