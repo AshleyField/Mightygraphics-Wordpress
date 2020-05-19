@@ -9,5 +9,3 @@
         </div>
     </div>
 </div>
-
-<?php the_field('main_image'); ?>

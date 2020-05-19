@@ -9,7 +9,7 @@ get_header();
 					<h1>Bringing your vision to reality</h1>
 				</div>
 				<div class="button btn-large">
-					<a href="">View Work</a>
+					<a href="/work">View Work</a>
 				</div>
 			</div>
 		</div>
@@ -107,7 +107,7 @@ get_header();
 							</g>
 						</svg>
 					</div>
-					<a href="" id="view-all-port">View All Website Design Projects</a>
+					<a href="/work" id="view-all-port">View All Website Design Projects</a>
 				</div>
 			</div>
 		</div>

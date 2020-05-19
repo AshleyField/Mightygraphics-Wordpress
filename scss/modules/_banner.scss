@@ -45,6 +45,36 @@
 	}
 }
 
+.page-banner {
+	width: 100%;
+	height: 15em;
+	background-position: center;
+	background-size: cover;
+	position: relative;
+
+	&-inner {
+		display: flex;
+		justify-content: center;
+		height: 100%;
+
+
+		h1 {
+			color: $wht;
+			align-self: center;
+			@include font-shadow;
+			font-size: 3em;
+			text-transform: uppercase;
+			@include kanit;
+			text-align: center;
+			margin: 0;
+			padding: 0;
+			z-index: 5;
+			position: relative;
+			
+		}
+	}
+}
+
 @media only screen and (min-width : 40em) {
 	.banner {
 		height: 20em;
@@ -59,6 +89,16 @@
 
 			.button {
 				width: 15em;
+			}
+		}
+	}
+
+	.page-banner {
+		height: 20em;
+
+		&-inner {
+			h1 {
+				font-size: 4em;
 			}
 		}
 	}
@@ -88,6 +128,16 @@
 						transform: translate(.3em);
 					}
 				}
+			}
+		}
+	}
+
+	.page-banner {
+		height: 30em;
+
+		&-inner {
+			h1 {
+				font-size: 4em;
 			}
 		}
 	}
