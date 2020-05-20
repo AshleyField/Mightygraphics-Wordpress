@@ -8,10 +8,10 @@
 				</div>
 				<div class="links">
 					<ul>
-						<li><a href="" class="active">Home</a></li>
-						<li><a href="">Work</a></li>
-						<li><a href="">About</a></li>
-						<li><a href="">Contact</a></li>
+						<li><a href="/" class="active">Home</a></li>
+						<li><a href="/work">Work</a></li>
+						<li><a href="/about">About</a></li>
+						<li><a href="/contact">Contact</a></li>
 					</ul>
 				</div>
 				<div class="copyright">

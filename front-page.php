@@ -118,102 +118,30 @@ get_header();
 			<div class="display-grid-inner">
 				<h2>Videography</h2>
 				<div class="images-container">
-					<div class="image-container">
-						<img src="images/video_portfolio_nomad_food.jpg" alt="">
-						<div class="video-overlay">
-							<div class="title">
-								<h4>Nomad Coffee - Food</h4>
-							</div>
-							<div class="link">
-								<a href=""><img src="images/play-icon.png" alt=""></a>
-							</div>
-						</div>
-					</div>
-					<div class="image-container">
-						<img src="images/video_portfolio_nomad_coffee.jpg" alt="">
-						<div class="video-overlay">
-							<div class="title">
-								<h4>Nomad Cafe - Coffee</h4>
-							</div>
-							<div class="link">
-								<a href=""><img src="images/play-icon.png" alt=""></a>
-							</div>
-						</div>
-					</div>
-					<div class="image-container">
-						<img src="images/video_portfolio_nomad_roasting.jpg" alt="">
-						<div class="video-overlay">
-							<div class="title">
-								<h4>Nomad Coffee - Roastig</h4>
-							</div>
-							<div class="link">
-								<a href=""><img src="images/play-icon.png" alt=""></a>
-							</div>
-						</div>
-					</div>
-					<div class="image-container">
-						<img src="images/video_portfolio_kate_chris.jpg" alt="">
-						<div class="video-overlay">
-							<div class="title">
-								<h4>Kate & Chris Wedding Video</h4>
-							</div>
-							<div class="link">
-								<a href=""><img src="images/play-icon.png" alt=""></a>
-							</div>
-						</div>
-					</div><div class="image-container">
-						<img src="images/video_portfolio_bridgewater.jpg" alt="">
-						<div class="video-overlay">
-							<div class="title">
-								<h4>Bridgewater Promo Video</h4>
-							</div>
-							<div class="link">
-								<a href=""><img src="images/play-icon.png" alt=""></a>
-							</div>
-						</div>
-					</div><div class="image-container">
-						<img src="images/video_portfolio_metro_dj_1.jpg" alt="">
-						<div class="video-overlay">
-							<div class="title">
-								<h4>Metro DJ Promo Video</h4>
-							</div>
-							<div class="link">
-								<a href=""><img src="images/play-icon.png" alt=""></a>
-							</div>
-						</div>
-					</div><div class="image-container">
-						<img src="images/video_portfolio_brooke_tom.jpg" alt="">
-						<div class="video-overlay">
-							<div class="title">
-								<h4>Brooke & Tom Wedding Video</h4>
-							</div>
-							<div class="link">
-								<a href=""><img src="images/play-icon.png" alt=""></a>
-							</div>
-						</div>
-					</div>
-					<div class="image-container">
-						<img src="images/video_portfolio_reu_nat.jpg" alt="">
-						<div class="video-overlay">
-							<div class="title">
-								<h4>Reu & Nat Wedding Video</h4>
-							</div>
-							<div class="link">
-								<a href=""><img src="images/play-icon.png" alt=""></a>
-							</div>
-						</div>
-					</div>
-					<div class="image-container">
-						<img src="images/video_portfolio_metro_dj_2.jpg" alt="">
-						<div class="video-overlay">
-							<div class="title">
-								<h4>Metro DJ Wedding Promo</h4>
-							</div>
-							<div class="link">
-								<a href=""><img src="images/play-icon.png" alt=""></a>
-							</div>
-						</div>
-					</div>
+					<?php 
+					// The Query
+
+					$args = array('post_type'=>'portfolio');
+					$the_query = new WP_Query( $args );
+
+					// The Loop
+
+					while ( $the_query->have_posts() ) {
+						$the_query->the_post();
+
+						$featured = get_field('featured', get_the_ID() );
+						$type = get_field('item_type', get_the_ID() );
+
+						if($featured == 'Yes' && $type == 'Video') {
+							get_template_part('portfolio','loop-video');
+						}
+						
+						
+					}
+
+					/* Restore original Post Data */
+					wp_reset_postdata();
+					?>
 				</div>
 				<div class="view-all-work-btn">
 					<div class="icon">
