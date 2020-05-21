@@ -32,9 +32,11 @@ if ( have_posts() ) {
 						</div>
 					</div>
 					<div class="right">
-						<div class="url">
-							<p><strong>URL:</strong> <a href="<?php the_field('website_link'); ?>"><?php the_field('website_link'); ?></a></p>
-						</div>
+						<?php if(get_field('website_link')){ ?>
+							<div class="url">
+								<p><strong>URL:</strong> <a href="<?php the_field('website_link'); ?>"><?php the_field('website_link'); ?></a></p>
+							</div>
+						<?php }; ?>
 						<div class="platform">
 							<p><strong>Platform:</strong> <?php the_field('platform'); ?></p>
 						</div>

@@ -8,6 +8,10 @@
 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
+	<link rel="icon" type="image/png" href="<?php echo get_theme_file_uri('images/favicon-03.png') ?>" sizes="16x16">
+	<link rel="icon" type="image/png" href="<?php echo get_theme_file_uri('images/favicon-02.png') ?>" sizes="32x32">
+	<link rel="icon" type="image/png" href="<?php echo get_theme_file_uri('images/favicon-01.png') ?>" sizes="64x64">
+
 </head>
 <body>
 	<div class="wrapper">

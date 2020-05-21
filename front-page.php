@@ -93,7 +93,7 @@ get_header();
 				}
 
 				/* Restore original Post Data */
-				wp_reset_postdata();
+				// wp_reset_postdata();
 				?>
 
 				</div>
@@ -140,7 +140,7 @@ get_header();
 					}
 
 					/* Restore original Post Data */
-					wp_reset_postdata();
+					// wp_reset_postdata();
 					?>
 				</div>
 				<div class="view-all-work-btn">

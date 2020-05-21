@@ -5,7 +5,7 @@
             <h4><?php the_title(); ?></h4>
         </div>
         <div class="link">
-            <a href="<?php the_permalink(); ?>">View Project</a>
+            <a href="<?php the_permalink(); ?>" target="_blank">View Project</a>
         </div>
     </div>
 </div>
