@@ -3,13 +3,13 @@
 get_header();
 
 ?>
-		<div class="banner">
+		<div class="banner" style="background-image: url(<?php the_field('banner_image'); ?>);">
 			<div class="banner-inner">
 				<div class="callout">
-					<h1>Bringing your vision to reality</h1>
+					<h1><?php the_field('banner_blurb'); ?></h1>
 				</div>
 				<div class="button btn-large">
-					<a href="/work">View Work</a>
+					<a href="<?php the_field('button_link'); ?>"><?php the_field('button_text'); ?></a>
 				</div>
 			</div>
 		</div>
@@ -24,15 +24,15 @@ get_header();
 				<div class="col-3 about-container">
 					<div class="about-item">
 						<h3>Website Design</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui dicta minus molestiae vel beatae natus eveniet ratione temporibus aperiam harum alias officiis assumenda</p>
+						<p><?php the_field('key_point_1'); ?></p>
 					</div>
 					<div class="about-item">
 						<h3>Video & Photo</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui dicta minus molestiae vel beatae natus eveniet ratione temporibus aperiam harum alias officiis assumenda</p>
+						<p><?php the_field('key_point_2'); ?></p>
 					</div>
 					<div class="about-item">
 						<h3>Graphic Design</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui dicta minus molestiae vel beatae natus eveniet ratione temporibus aperiam harum alias officiis assumenda</p>
+						<p><?php the_field('key_point_3'); ?></p>
 					</div>
 				</div>
 			</div>

@@ -1,0 +1,80 @@
+.about-page-container {
+    margin: 3em auto;;
+    width: 90%;
+    max-width: 80em;
+
+    .image-blurb {
+        .image {
+            max-width: 30em;
+            margin: 0 auto;
+
+            img {
+                width: 100%;
+                display: block;
+            }
+
+        }
+
+        .blurb {
+            text-align: left;
+            margin: 2em 0;
+        }
+    }
+
+    .skills-other {
+        margin: 2em 0;
+
+        h2 {
+            @include roboto;
+            font-weight: 800;
+            font-size: 1.25em;
+        }
+
+        .other {
+            margin: 2em 0;
+
+            
+        }
+    }
+}
+
+@media only screen and (min-width : 40em) {
+    .about-page-container {
+        width: 80%;
+    }
+}
+
+@media only screen and (min-width : 60em) {
+    .about-page-container {
+        .image-blurb {
+            display: flex;
+            align-items: center;
+
+            .image {
+                flex: 1 0 30%;
+            }
+
+            .blurb {
+                flex: 1 0 70%;
+                margin-left: 4em;
+                p {
+                    text-align: left;
+                }
+            }
+        }
+
+        .skills-other {
+            display:  flex;
+            margin: 4em 0;
+
+            .skills {
+                flex: 1 0 45%;
+            }
+
+            .other {
+                flex: 1 0 45%;
+                margin: 0;
+            }
+        }
+    }
+}
