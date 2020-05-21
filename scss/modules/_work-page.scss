@@ -1,0 +1,115 @@
+
+.single-work {
+    margin: 3em 0;
+    .title {
+        h1 {
+            @include kanit;
+            text-align: center;
+            text-transform: uppercase;
+            font-size: 3em;
+        }
+    }
+
+    .blurb-1 {
+        text-align: center;
+    }
+
+    &-inner {
+        .left {
+            .image {
+                width: 100%;
+                margin: 0 auto;
+
+                img {
+                    width: 100%;
+                    display: block;
+                }
+            }
+        }
+
+        .right {
+            width: 80%;
+            margin: 0 auto;
+
+            .url {
+                a {
+                    color: $mg-blue;
+                }
+            }
+
+            .blurb-2 {
+                a {
+                    color: $mg-blue;
+                }
+            }
+        }
+    }
+
+    .view-all-work-btn {
+
+        transition: .3s ease all;
+        padding-bottom: 1em;
+        margin-left: 2em;
+
+        .icon {
+            fill: $mg-dark-blue;
+            float: left;
+
+            svg {
+                display: block;
+                width: 1.25em;
+                transition: .3s ease fill;
+            }
+        }
+
+        a {
+            float: left;
+            color: $mg-dark-blue;
+            text-decoration: none;
+            margin: 0;
+            padding: 0;
+            line-height: 1.25em;
+            transition: .3s ease color;
+            margin-left: .5em;
+        }
+
+        &:hover #svg-arrow {
+            fill: $mg-blue;
+        }
+
+        &:hover #view-all-port {
+            color: $mg-blue;
+        }
+    }
+
+}
+
+@media only screen and (min-width : 40em) {
+
+}
+
+@media only screen and (min-width : 60em) {
+
+    .single-work {
+        max-width: 80em;
+        margin: 3em auto;
+        margin-bottom: 5em;
+
+        &-inner {
+            display: flex;
+            justify-content: center;
+            margin: 3em 0;
+
+            .left {
+                flex: 1 0 40%;
+                align-self: center;
+            }
+
+            .right {
+                flex: 1 0 50%;
+                align-self: center;
+            }
+        }
+    }
+
+}

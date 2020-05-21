@@ -1,0 +1,35 @@
+.wpforms-container {
+
+        .wpforms-submit-container {
+            .wpforms-submit {
+                width: 100%;
+                background-color: $mg-dark-blue !important;
+                color: $wht !important;
+                border-radius: 5px !important;
+            }
+        }
+
+}
+
+@media only screen and (min-width : 60em) {
+    .wpforms-container {
+        width: 80% !important;
+        margin: 1em auto !important;
+        
+        .wpforms-field-row {
+            max-width: 100% !important;
+        }
+        
+        .wpforms-field-medium {
+            max-width: 100% !important;
+        }
+
+        .wpforms-submit {
+            transition: .5s ease all;
+
+            &:hover {
+                background-color: $mg-blue !important;
+            }
+        }
+    }
+}

@@ -81,3 +81,24 @@ html {
   ::-moz-selection {
 	background: lighten($mg-blue,45%); /* Gecko Browsers */
   }
+
+.page-content {
+	margin: 2em;
+	max-width: 80em;
+
+	h1 {
+		@include kanit;
+		text-align: center;
+		text-transform: uppercase;
+	}
+
+	p {
+		text-align: center;
+	}
+}
+
+@media only screen and (min-width : 60em) {
+	.page-content {
+		margin: 4em auto;
+	}
+}
