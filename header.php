@@ -19,7 +19,7 @@
 			<div class="header-inner mobile-header">
 				<div class="logo">
 					<a href="/">
-						<img src="<?php echo get_theme_file_uri('images/logo.png') ?>" alt="Mightygraphics Logo">
+						<img src="<?php echo get_theme_mod('white_logo',get_theme_file_uri('images/logo.png')); ?>" alt="Mightygraphics Logo">
 					</a>
 				</div>
 				<nav class="sidenav" data-state="closed">

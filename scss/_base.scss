@@ -97,6 +97,25 @@ html {
 	}
 }
 
+.large-question {
+	font-size: 7em;
+	color: $mg-blue;
+	margin-bottom: 0;
+}
+
+.page-content {
+	width: 90%;
+	margin: 0 auto;
+	a {
+		color: $mg-blue;
+	}
+}
+
+#no-page {
+	margin: 7em auto;
+	margin-top: 5em;
+}
+
 @media only screen and (min-width : 60em) {
 	.page-content {
 		margin: 4em auto;

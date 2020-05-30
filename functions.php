@@ -26,3 +26,75 @@ function create_portfolio() {
   register_post_type( 'portfolio', $arg);
 }
 add_action( 'init', 'create_portfolio' );
+
+function mytheme_customize_register($wp_customize){
+  $wp_customize->add_section( 'section_customisations' , array(
+    'title'      => 'Theme Settings',
+    'priority'   => 30,
+  ));
+
+  $wp_customize->add_setting('white_logo', array(
+    'default' => get_bloginfo('template_directory').'/images/logo.png',
+    'transport' => 'refresh'
+  ));
+
+  $wp_customize->add_control(new WP_Customize_Upload_Control( $wp_customize, 'white_logo_control', 
+    array(
+      'label'      => 'White Logo Image',
+      'section'    => 'section_customisations',
+      'settings'   => 'white_logo',
+    )) 
+  );
+
+  $wp_customize->add_setting('black_logo', array(
+    'default' => get_bloginfo('template_directory').'/images/logo-white.png',
+    'transport' => 'refresh'
+  ));
+
+  $wp_customize->add_control(new WP_Customize_Upload_Control( $wp_customize, 'black_logo_control', 
+    array(
+      'label'      => 'Black Logo Image',
+      'section'    => 'section_customisations',
+      'settings'   => 'black_logo',
+    )) 
+  );
+
+  $wp_customize->add_setting( 'facebook_link', array(
+    'capability' => 'edit_theme_options'
+  ));
+
+  $wp_customize->add_control( 'facebook_link_control', array(
+     'type' => 'text',
+     'section' => 'section_customisations', // Add a default or your own section
+     'label' => __( 'Facebook Link' ),
+      'description' => __( 'Enter Facebook Link'),
+      'settings'   => 'facebook_link',
+    ));
+
+    $wp_customize->add_setting( 'linkedin_link', array(
+      'capability' => 'edit_theme_options'
+    ));
+  
+    $wp_customize->add_control( 'linkedin_link_control', array(
+       'type' => 'text',
+       'section' => 'section_customisations', // Add a default or your own section
+       'label' => __( 'Linked In Link' ),
+        'description' => __( 'Enter Linked In Link'),
+        'settings'   => 'linkedin_link',
+      ));
+
+      $wp_customize->add_setting( 'github_link', array(
+        'capability' => 'edit_theme_options'
+      ));
+    
+      $wp_customize->add_control( 'github_link_control', array(
+         'type' => 'text',
+         'section' => 'section_customisations', // Add a default or your own section
+         'label' => __( 'GitHub Link' ),
+          'description' => __( 'Enter GitHub Link'),
+          'settings'   => 'github_link',
+        ));
+
+}
+
+add_action('customize_register', 'mytheme_customize_register');
